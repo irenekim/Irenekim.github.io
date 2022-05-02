@@ -1,6 +1,6 @@
 layout: page
 title: "basic codes of Deep Learning in pytorch"
-permalink: /Notes/DL/1/
+permalink: /notes/dl/1/
 
 
 # Usually in a pytorch deep learning code, there is a model file/folder and a run/train file. There could still be other files such as utils etc.
