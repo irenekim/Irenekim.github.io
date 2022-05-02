@@ -7,17 +7,22 @@ permalink: /notes/dl/1/
 # This page lists the typically used codes in a run/train file 
 
 1. Defining the device for training : 
-    '''python
-    device = 'cpu' or >>>device = 'cuda'
     '''
+    device = 'cpu' 
+    '''
+    or 
+    '''
+    device = 'cuda'
+    '''
+    
     following is typically used
-    '''python
+    '''
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print('Using device:', device)
     '''
     
     Could use additional Info when using cuda
-    '''python
+    '''
     if device.type == 'cuda':
       print(torch.cuda.get_device_name(0))
       print('Memory Usage:')
@@ -27,7 +32,7 @@ permalink: /notes/dl/1/
 2. Seed for reproducibility:
 
     There are many kinds of seeds that can be used. Here for a complete reproducibility, I often use : 
-    '''python
+    '''
     torch.backends.cudnn.deterministic = True #only applies to CUDA convolution operations : use only deterministic algorithms
     random.seed(args.seed) #this is for custom operators 
     np.random.seed(args.seed) #numpy random number generator
