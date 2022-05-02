@@ -15,11 +15,11 @@ permalink: /Notes/DL/0/
     
 2. Defining paths
     Including modules (files with the “. py” extension) in the same directory : 
-    '''python
+    '''
     from module1 import *
     '''
     Including modules from the parent directory 
-    '''python
+    '''
     import sys
     import os
     sys.path.append(os.path.join(sys.path[0], '..'))
@@ -31,7 +31,7 @@ permalink: /Notes/DL/0/
     (from https://stackoverflow.com/questions/14132789/relative-imports-for-the-billionth-time/14132912#14132912)
     
     Here is another way : 
-    '''python
+    '''
     module_path = os.path.abspath(os.path.join('..'))
     if module_path not in sys.path:
         sys.path.append(module_path) #parent path
